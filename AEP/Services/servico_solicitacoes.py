@@ -2,7 +2,7 @@ from typing import Optional
 
 from Models.categoria import TipoCategoria, TipoIdentificacao
 from Models.solicitacao import Prioridade, Solicitacao
-from Models.status import StatusSolicitacao
+from AEP.Enums.status import StatusSolicitacao
 from Models.usuario import Usuario
 from Utils.protocolo import gerar_protocolo
 

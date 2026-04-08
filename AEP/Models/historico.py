@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from Models.status import StatusSolicitacao
+from AEP.Enums.status import StatusSolicitacao
 from Models.usuario import Usuario
 
 

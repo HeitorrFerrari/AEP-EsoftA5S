@@ -1,6 +1,6 @@
 from Models.categoria import TipoCategoria
 from Models.solicitacao import Prioridade
-from Models.status import StatusSolicitacao
+from AEP.Enums.status import StatusSolicitacao
 from Models.usuario import Usuario
 from Services.servico_solicitacoes import ServicoSolicitacoes
 

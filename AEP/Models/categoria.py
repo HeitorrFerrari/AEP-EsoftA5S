@@ -1,6 +1,5 @@
-from enum import Enum
-from Models.tipoCategoria import TipoCategoria
-from Models.tipoIdentificacao import TipoIdentificacao
+from AEP.Enums.tipoCategoria import TipoCategoria
+from Enums.tipoIdentificação import TipoIdentificacao
 
 
 class Categoria:

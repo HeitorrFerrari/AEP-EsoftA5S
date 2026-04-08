@@ -3,9 +3,9 @@ from typing import Optional
 
 from Models.categoria import TipoCategoria, TipoIdentificacao
 from Models.historico import Movimentacao
-from Models.status import StatusSolicitacao
+from AEP.Enums.status import StatusSolicitacao
 from Models.usuario import Usuario
-from Models.prioridade import Prioridade
+from AEP.Enums.prioridade import Prioridade
 
 
 
