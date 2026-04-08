@@ -13,10 +13,10 @@ class StatusSolicitacao(Enum):
 
 	def pode_transicionar_para(self, novo_status: "StatusSolicitacao") -> bool:
 		fluxo = {
-			StatusSolicitacao.ABERTO: {StatusSolicitacao.TRIAGEM, StatusSolicitacao.ENCERRADO},
-			StatusSolicitacao.TRIAGEM: StatusSolicitacao.EM_EXECUCAO,
-			StatusSolicitacao.EM_EXECUCAO: StatusSolicitacao.RESOLVIDO,
-			StatusSolicitacao.RESOLVIDO: StatusSolicitacao.ENCERRADO,
+			StatusSolicitacao.ABERTO: {StatusSolicitacao.TRIAGEM, StatusSolicitacao.EM_EXECUCAO, StatusSolicitacao.RESOLVIDO, StatusSolicitacao.ENCERRADO},
+			StatusSolicitacao.TRIAGEM: {StatusSolicitacao.EM_EXECUCAO, StatusSolicitacao.RESOLVIDO, StatusSolicitacao.ENCERRADO},
+			StatusSolicitacao.EM_EXECUCAO: {StatusSolicitacao.RESOLVIDO, StatusSolicitacao.ENCERRADO},
+			StatusSolicitacao.RESOLVIDO: {StatusSolicitacao.ENCERRADO},
 			StatusSolicitacao.ENCERRADO: None,
 		}
 		proximo = fluxo[self]
