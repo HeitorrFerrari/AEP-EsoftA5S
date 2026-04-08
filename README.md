@@ -11,8 +11,8 @@ Sistema de gerenciamento de demandas urbanas desenvolvido em Python, que permite
 | Integrante                  | RA           |
 |-----------------------------|--------------|
 | Joao Paulo Traguetta Rufino |24000674-2    |
-| Heitor Ferrari              |              |
-| Maria Eduarda               |              |
+| Heitor Ferrari              |24015780-2    |
+| Maria Eduarda               |24021296-2    |
 
 ---
 
