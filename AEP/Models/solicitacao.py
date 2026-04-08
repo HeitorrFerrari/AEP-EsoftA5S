@@ -1,42 +1,12 @@
 from datetime import date, datetime, timedelta
-from enum import Enum
 from typing import Optional
 
 from Models.categoria import TipoCategoria, TipoIdentificacao
 from Models.historico import Movimentacao
 from Models.status import StatusSolicitacao
 from Models.usuario import Usuario
+from Models.prioridade import Prioridade
 
-
-class Prioridade(Enum):
-	BAIXA = "Baixa"
-	MEDIA = "Media"
-	ALTA = "Alta"
-	CRITICA = "Critica"
-
-	def get_sla_dias(self) -> int:
-		return {
-			Prioridade.BAIXA: 15,
-			Prioridade.MEDIA: 7,
-			Prioridade.ALTA: 3,
-			Prioridade.CRITICA: 1,
-		}[self]
-
-	def get_impacto_social(self) -> str:
-		return {
-			Prioridade.BAIXA: "Impacto localizado",
-			Prioridade.MEDIA: "Impacto moderado",
-			Prioridade.ALTA: "Impacto relevante",
-			Prioridade.CRITICA: "Impacto social alto",
-		}[self]
-
-	def get_peso(self) -> int:
-		return {
-			Prioridade.BAIXA: 1,
-			Prioridade.MEDIA: 2,
-			Prioridade.ALTA: 3,
-			Prioridade.CRITICA: 4,
-		}[self]
 
 
 class Solicitacao:
